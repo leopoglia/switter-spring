@@ -20,17 +20,17 @@ public class Grupo {
     @Column(unique = true)
     private Integer id;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     String titulo;
 
-    @Column(length = 100, nullable = false)
+    @Column(length = 100)
     String descricao;
 
     @ManyToMany
     @JoinTable(
             name = "group_users",
-            joinColumns = @JoinColumn(name = "id_grupo"),
-            inverseJoinColumns = @JoinColumn(name = "id_user"))
+            joinColumns = @JoinColumn(name = "grupo"),
+            inverseJoinColumns = @JoinColumn(name = "usuario"))
     Set<Usuario> usuarios;
 
 }
