@@ -1,11 +1,8 @@
 package br.senai.sc.almoxarifado.model.service;
 
-import br.senai.sc.almoxarifado.model.entities.Chat;
 import br.senai.sc.almoxarifado.model.entities.Grupo;
-import br.senai.sc.almoxarifado.repository.ChatRepository;
 import br.senai.sc.almoxarifado.repository.GrupoRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
