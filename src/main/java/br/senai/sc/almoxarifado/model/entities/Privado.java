@@ -3,24 +3,31 @@ package br.senai.sc.almoxarifado.model.entities;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
-@Table(name = "chat")
+@Table(name = "privado")
 @AllArgsConstructor
 @NoArgsConstructor()
 @Getter
 @Setter
 @ToString
 @EqualsAndHashCode
-public class Chat {
+public class Privado {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(unique = true)
     private Integer id;
 
-    @Column(length = 100, nullable = false)
-    private Date dataCriacao;
+    @OneToOne
+    @JoinColumn(name = "id_chat")
+    Chat chat;
+
+    @OneToOne
+    @JoinColumn(name = "id_reciver")
+    Usuario reciver;
+
+    @OneToOne
+    @JoinColumn(name = "id_sender")
+    Usuario sender;
 }
