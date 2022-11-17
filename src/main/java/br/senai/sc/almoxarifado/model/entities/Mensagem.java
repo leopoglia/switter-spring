@@ -32,7 +32,7 @@ public class Mensagem {
 
     @OneToOne
     @JoinColumn(name = "id_author")
-    Usuario author;
+    Usuario autor;
 
 
 }

@@ -17,5 +17,5 @@ public class MensagemDTO {
 
     Chat chat;
 
-    Usuario author;
+    Usuario autor;
 }
